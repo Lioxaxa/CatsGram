@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vpq-rb-sC1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar-->
+        <scene sceneID="nyt-Bx-dXl">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBar" id="vpq-rb-sC1" customClass="MainTabBar" customModule="Lesson_9__12__Insta_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IB0-vg-yxO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9Gb-ZF-Ohq"/>
+                        <segue destination="GYh-d0-YtH" kind="relationship" relationship="viewControllers" id="w7f-Ww-xda"/>
+                        <segue destination="7xA-6z-fA8" kind="relationship" relationship="viewControllers" id="33g-bY-0hC"/>
+                        <segue destination="X3q-eP-LSR" kind="relationship" relationship="viewControllers" id="ZdF-Mb-Coh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaT-Yl-RdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-748" y="279"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ListingViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ListingViewController" customModule="Lesson_9__12__Insta_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xm5-O4-PD3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xm5-O4-PD3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4mI-LN-Tqm"/>
+                            <constraint firstItem="xm5-O4-PD3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bav-Qc-TgY"/>
+                            <constraint firstItem="xm5-O4-PD3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="i1b-Wm-8oy"/>
+                            <constraint firstItem="xm5-O4-PD3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nLN-bg-cxc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Photo" image="photo" catalog="system" id="kaC-Zd-gRC"/>
+                    <connections>
+                        <outlet property="tableView" destination="xm5-O4-PD3" id="ssl-aD-cQY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="843"/>
+        </scene>
+        <!--Add Photo-->
+        <scene sceneID="u2D-dI-gzJ">
+            <objects>
+                <viewController id="7xA-6z-fA8" userLabel="Add Photo" customClass="AddPhotoViewController" customModule="Lesson_9__12__Insta_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XAP-CP-2Vi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GN0-87-4Zd">
+                                <rect key="frame" x="0.0" y="104" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="414" id="LfE-NU-dig"/>
+                                    <constraint firstAttribute="width" constant="414" id="pet-dV-kpJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wk-ma-CRT">
+                                <rect key="frame" x="101" y="669" width="212" height="50"/>
+                                <color key="backgroundColor" red="0.93649384469999997" green="0.65294024780000004" blue="0.49736874170000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2QH-R5-Ljy"/>
+                                    <constraint firstAttribute="width" constant="212" id="Rph-ac-MqI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add Photo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPhotoButton:" destination="7xA-6z-fA8" eventType="touchUpInside" id="ZKi-4g-Nw2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rcc-Xg-5tx"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="GN0-87-4Zd" firstAttribute="leading" secondItem="rcc-Xg-5tx" secondAttribute="leading" id="6YR-RM-Qw3"/>
+                            <constraint firstItem="7wk-ma-CRT" firstAttribute="leading" secondItem="rcc-Xg-5tx" secondAttribute="leading" constant="101" id="EWP-cq-8ap"/>
+                            <constraint firstItem="7wk-ma-CRT" firstAttribute="top" secondItem="GN0-87-4Zd" secondAttribute="bottom" constant="151" id="MTE-CF-8yC"/>
+                            <constraint firstItem="rcc-Xg-5tx" firstAttribute="trailing" secondItem="7wk-ma-CRT" secondAttribute="trailing" constant="101" id="WL5-bl-7tE"/>
+                            <constraint firstItem="GN0-87-4Zd" firstAttribute="top" secondItem="rcc-Xg-5tx" secondAttribute="top" constant="60" id="rsh-kZ-Dq1"/>
+                            <constraint firstItem="GN0-87-4Zd" firstAttribute="trailing" secondItem="rcc-Xg-5tx" secondAttribute="trailing" id="wei-cW-JaP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Photo" image="plus.app" catalog="system" largeContentSizeImage="none" id="hgj-67-fXQ" userLabel="Add Photo"/>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="7wk-ma-CRT" id="XZZ-Og-oLs"/>
+                        <outlet property="choosedPhoto" destination="GN0-87-4Zd" id="tgJ-7Z-Xd6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tel-Eu-to4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450.7246376811595" y="569.86607142857144"/>
+        </scene>
+        <!--Date-->
+        <scene sceneID="lqv-GU-7Tt">
+            <objects>
+                <viewController id="X3q-eP-LSR" customClass="DateViewController" customModule="Lesson_9__12__Insta_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dsi-Xx-M9O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateOne" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zp-nQ-8aj">
+                                <rect key="frame" x="99" y="238" width="217" height="23"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="hoH-2D-CpM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateTwo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-2B-GXY">
+                                <rect key="frame" x="99" y="361" width="217" height="23"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="Hya-VN-Iot"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="217" id="W6N-Xg-mLp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateThree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kh-53-IHj">
+                                <rect key="frame" x="99" y="484" width="217" height="23"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="217" id="6XI-1J-97v"/>
+                                    <constraint firstAttribute="width" constant="217" id="8vV-yY-V8l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x7-aa-rIO">
+                                <rect key="frame" x="132" y="585" width="151" height="33"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="5G3-xh-4RA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Show Date">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showDateButton:" destination="X3q-eP-LSR" eventType="touchUpInside" id="x57-7o-q4c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ6-mN-p8j">
+                                <rect key="frame" x="148" y="695" width="119" height="32"/>
+                                <color key="backgroundColor" red="0.91376930479999996" green="0.85559063030000004" blue="0.14652874099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Open URL">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openURL:" destination="X3q-eP-LSR" eventType="touchUpInside" id="lEW-P1-XnT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xDS-qT-hp0"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="6x7-aa-rIO" firstAttribute="top" secondItem="4Kh-53-IHj" secondAttribute="bottom" constant="78" id="1kL-zv-nVa"/>
+                            <constraint firstItem="xDS-qT-hp0" firstAttribute="trailing" secondItem="3pO-2B-GXY" secondAttribute="trailing" constant="98" id="4jT-LH-SYJ"/>
+                            <constraint firstItem="4Kh-53-IHj" firstAttribute="leading" secondItem="xDS-qT-hp0" secondAttribute="leading" constant="99" id="4x0-IF-CzX"/>
+                            <constraint firstItem="xDS-qT-hp0" firstAttribute="trailing" secondItem="IJ6-mN-p8j" secondAttribute="trailing" constant="147" id="6Id-AD-wfk"/>
+                            <constraint firstItem="xDS-qT-hp0" firstAttribute="trailing" secondItem="4Kh-53-IHj" secondAttribute="trailing" constant="98" id="9pc-jE-sZN"/>
+                            <constraint firstItem="4Kh-53-IHj" firstAttribute="top" secondItem="3pO-2B-GXY" secondAttribute="bottom" constant="100" id="RhI-Y8-Fhw"/>
+                            <constraint firstItem="3pO-2B-GXY" firstAttribute="leading" secondItem="xDS-qT-hp0" secondAttribute="leading" constant="99" id="VQz-Be-La4"/>
+                            <constraint firstItem="xDS-qT-hp0" firstAttribute="trailing" secondItem="9Zp-nQ-8aj" secondAttribute="trailing" constant="98" id="b4g-Ry-9em"/>
+                            <constraint firstItem="IJ6-mN-p8j" firstAttribute="top" secondItem="6x7-aa-rIO" secondAttribute="bottom" constant="77" id="j0V-wI-ZmO"/>
+                            <constraint firstItem="6x7-aa-rIO" firstAttribute="leading" secondItem="xDS-qT-hp0" secondAttribute="leading" constant="132" id="jbf-mc-N00"/>
+                            <constraint firstItem="9Zp-nQ-8aj" firstAttribute="top" secondItem="xDS-qT-hp0" secondAttribute="top" constant="194" id="mVy-rk-gv4"/>
+                            <constraint firstItem="9Zp-nQ-8aj" firstAttribute="leading" secondItem="xDS-qT-hp0" secondAttribute="leading" constant="99" id="s4u-SV-jp2"/>
+                            <constraint firstItem="3pO-2B-GXY" firstAttribute="top" secondItem="9Zp-nQ-8aj" secondAttribute="bottom" constant="100" id="tIe-gA-ycw"/>
+                            <constraint firstItem="xDS-qT-hp0" firstAttribute="trailing" secondItem="6x7-aa-rIO" secondAttribute="trailing" constant="131" id="vQH-MS-Hlc"/>
+                            <constraint firstItem="IJ6-mN-p8j" firstAttribute="leading" secondItem="xDS-qT-hp0" secondAttribute="leading" constant="148" id="zeM-MV-J0J"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Date" image="calendar" catalog="system" id="O8U-Ey-Lqq"/>
+                    <connections>
+                        <outlet property="dateOneLabel" destination="9Zp-nQ-8aj" id="QQk-OG-rc9"/>
+                        <outlet property="dateThreeLabel" destination="4Kh-53-IHj" id="O2m-P1-JdD"/>
+                        <outlet property="dateTwoLabel" destination="3pO-2B-GXY" id="DsF-ON-uC1"/>
+                        <outlet property="openURL" destination="IJ6-mN-p8j" id="0fk-Bo-DVp"/>
+                        <outlet property="showDateButton" destination="6x7-aa-rIO" id="KeB-cZ-yPp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YOq-Ya-gR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2149.275362318841" y="86.383928571428569"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="IpL-o5-LT0">
+            <objects>
+                <viewController id="GYh-d0-YtH" customClass="ProfileViewController" customModule="Lesson_9__12__Insta_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0sh-4A-0e3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wfj-YX-z6G">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GYh-d0-YtH" id="y2n-rS-WKJ"/>
+                                    <outlet property="delegate" destination="GYh-d0-YtH" id="iE6-Xr-egU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8T9-Oi-MYD"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="Wfj-YX-z6G" firstAttribute="top" secondItem="8T9-Oi-MYD" secondAttribute="top" id="Uym-Q2-prr"/>
+                            <constraint firstItem="Wfj-YX-z6G" firstAttribute="bottom" secondItem="8T9-Oi-MYD" secondAttribute="bottom" id="gjF-uf-8v4"/>
+                            <constraint firstItem="Wfj-YX-z6G" firstAttribute="trailing" secondItem="8T9-Oi-MYD" secondAttribute="trailing" id="hzr-Hh-0nL"/>
+                            <constraint firstItem="Wfj-YX-z6G" firstAttribute="leading" secondItem="8T9-Oi-MYD" secondAttribute="leading" id="u2g-BD-w4i"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="face.smiling" catalog="system" id="UAk-KB-OQR"/>
+                    <connections>
+                        <outlet property="tableView" destination="Wfj-YX-z6G" id="jxd-jN-0MC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tB7-x0-B5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="61"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="face.smiling" catalog="system" width="128" height="121"/>
+        <image name="none" width="128" height="128"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
